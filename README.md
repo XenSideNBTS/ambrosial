@@ -18,7 +18,7 @@ Ambrosial is a launcher for Minecraft: Windows 10 Edition modifications.
 - `Ambrosial has a wide collection of modifications, your favourites & more will be included.`
 
 ## Download & installation
-Ambrosial is portable and very easy to install. Simply [click here](https://github.com/disepi/ambrosial/releases) and download the **latest** `Ambrosial.exe` listed at the top. Once you have downloaded the executable, open it and installation is done. Don't get confused with the source code download - you will not need to download it if you do not wish to modify it.
+Ambrosial is portable and very easy to install. Simply [click here](https://github.com/XenSideNBTS/ambrosial/releases) and download the **latest** `Ambrosial.exe` listed at the top. Once you have downloaded the executable, open it and installation is done. Don't get confused with the source code download - you will not need to download it if you do not wish to modify it.
 
 ## Troubleshooting
 If you have any problem running Ambrosial or any included modification, try these listed fixes:
