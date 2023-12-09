@@ -5,7 +5,7 @@ Ambrosial is a launcher for Minecraft: Windows 10 Edition modifications.
 
 ## Features
 - [x] Server stored modifications
-- `Ensures you are always up to date by retrieving the latest modifications from the server.(does not work)`
+- `Ensures you are always up to date by retrieving the latest modifications from the server.`
 - [x] Fast & reliable
 - `Ambrosial requires very little power & network usage, downloads and injections are almost instant.`
 - [x] Download caching
