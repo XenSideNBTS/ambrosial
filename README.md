@@ -1,4 +1,4 @@
-<h3 align="center"><img src="https://user-images.githubusercontent.com/54753631/177060465-cfa6fa0f-727a-4f3e-b86d-45d4b844c4c9.png" alt="Ambrosial"></h3>
+<h3 align="center"><img src="https://raw.githubusercontent.com/XenSideNBTS/ambrosial/main/Resources/Ambrosial.png" alt="Ambrosial"></h3>
 <h1 align="center">ambrosial reloaded</h1>
 
 Ambrosial is a launcher for Minecraft: Windows 10 Edition modifications.
