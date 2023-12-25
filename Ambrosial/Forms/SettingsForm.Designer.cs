@@ -91,7 +91,9 @@
             // 
             // Drag
             // 
+            this.Drag.DockIndicatorTransparencyValue = 0.6D;
             this.Drag.TargetControl = this.topBar;
+            this.Drag.UseTransparentDrag = true;
             // 
             // Shadow
             // 
@@ -122,16 +124,12 @@
             // 
             this.saveBut.Animated = true;
             this.saveBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.saveBut.CheckedState.Parent = this.saveBut;
-            this.saveBut.CustomImages.Parent = this.saveBut;
             this.saveBut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.saveBut.Font = new System.Drawing.Font("Yu Gothic UI Light", 10.25F);
             this.saveBut.ForeColor = System.Drawing.Color.White;
-            this.saveBut.HoverState.Parent = this.saveBut;
-            this.saveBut.Location = new System.Drawing.Point(47, 404);
+            this.saveBut.Location = new System.Drawing.Point(47, 145);
             this.saveBut.Name = "saveBut";
             this.saveBut.ShadowDecoration.Enabled = true;
-            this.saveBut.ShadowDecoration.Parent = this.saveBut;
             this.saveBut.Size = new System.Drawing.Size(180, 45);
             this.saveBut.TabIndex = 7;
             this.saveBut.Text = "Save";
@@ -163,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(281, 450);
+            this.ClientSize = new System.Drawing.Size(281, 211);
             this.Controls.Add(this.guna2CheckBox1);
             this.Controls.Add(this.saveBut);
             this.Controls.Add(this.shouldcheck);

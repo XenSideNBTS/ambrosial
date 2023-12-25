@@ -38,12 +38,11 @@
             this.Shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.clientspanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.reload = new Guna.UI2.WinForms.Guna2CircleButton();
             this.settings = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.addnew = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Username = new System.Windows.Forms.Label();
             this.Version = new System.Windows.Forms.Label();
             this.Animate = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.reload = new Guna.UI2.WinForms.Guna2CircleButton();
             this.topBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -90,13 +89,15 @@
             this.title.Font = new System.Drawing.Font("Yu Gothic UI Light", 10.25F);
             this.title.Location = new System.Drawing.Point(3, 4);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(69, 19);
+            this.title.Size = new System.Drawing.Size(129, 19);
             this.title.TabIndex = 0;
-            this.title.Text = "Ambrosial";
+            this.title.Text = "Ambrosial Reloaded";
             // 
             // Drag
             // 
+            this.Drag.DockIndicatorTransparencyValue = 0.6D;
             this.Drag.TargetControl = this.topBar;
+            this.Drag.UseTransparentDrag = true;
             // 
             // Shadow
             // 
@@ -116,7 +117,6 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.panel4.Controls.Add(this.reload);
             this.panel4.Controls.Add(this.settings);
-            this.panel4.Controls.Add(this.addnew);
             this.panel4.Controls.Add(this.Username);
             this.panel4.Controls.Add(this.Version);
             this.panel4.Location = new System.Drawing.Point(0, 408);
@@ -125,41 +125,33 @@
             this.panel4.TabIndex = 5;
             this.panel4.DoubleClick += new System.EventHandler(this.panel4_DoubleClick);
             // 
+            // reload
+            // 
+            this.reload.Animated = true;
+            this.reload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.reload.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reload.ForeColor = System.Drawing.Color.White;
+            this.reload.Image = ((System.Drawing.Image)(resources.GetObject("reload.Image")));
+            this.reload.Location = new System.Drawing.Point(102, 12);
+            this.reload.Name = "reload";
+            this.reload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.reload.Size = new System.Drawing.Size(26, 25);
+            this.reload.TabIndex = 7;
+            this.reload.Click += new System.EventHandler(this.reload_Click);
+            // 
             // settings
             // 
             this.settings.Animated = true;
-            this.settings.CheckedState.Parent = this.settings;
-            this.settings.CustomImages.Parent = this.settings;
             this.settings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.settings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.settings.ForeColor = System.Drawing.Color.White;
-            this.settings.HoverState.Parent = this.settings;
             this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.Location = new System.Drawing.Point(125, 17);
+            this.settings.Location = new System.Drawing.Point(134, 12);
             this.settings.Name = "settings";
             this.settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.settings.ShadowDecoration.Parent = this.settings;
             this.settings.Size = new System.Drawing.Size(26, 25);
             this.settings.TabIndex = 6;
             this.settings.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // addnew
-            // 
-            this.addnew.Animated = true;
-            this.addnew.CheckedState.Parent = this.addnew;
-            this.addnew.CustomImages.Parent = this.addnew;
-            this.addnew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.addnew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addnew.ForeColor = System.Drawing.Color.White;
-            this.addnew.HoverState.Parent = this.addnew;
-            this.addnew.Location = new System.Drawing.Point(150, 17);
-            this.addnew.Name = "addnew";
-            this.addnew.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.addnew.ShadowDecoration.Parent = this.addnew;
-            this.addnew.Size = new System.Drawing.Size(26, 25);
-            this.addnew.TabIndex = 5;
-            this.addnew.Text = "+";
-            this.addnew.Click += new System.EventHandler(this.addnew_Click);
             // 
             // Username
             // 
@@ -187,24 +179,6 @@
             // 
             this.Animate.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.Animate.TargetForm = this;
-            // 
-            // reload
-            // 
-            this.reload.Animated = true;
-            this.reload.CheckedState.Parent = this.reload;
-            this.reload.CustomImages.Parent = this.reload;
-            this.reload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.reload.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reload.ForeColor = System.Drawing.Color.White;
-            this.reload.HoverState.Parent = this.reload;
-            this.reload.Image = ((System.Drawing.Image)(resources.GetObject("reload.Image")));
-            this.reload.Location = new System.Drawing.Point(100, 17);
-            this.reload.Name = "reload";
-            this.reload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.reload.ShadowDecoration.Parent = this.reload;
-            this.reload.Size = new System.Drawing.Size(26, 25);
-            this.reload.TabIndex = 7;
-            this.reload.Click += new System.EventHandler(this.reload_Click);
             // 
             // Launcher
             // 
@@ -244,7 +218,6 @@
         private System.Windows.Forms.Label Version;
         private System.Windows.Forms.Label Username;
         private Guna.UI2.WinForms.Guna2AnimateWindow Animate;
-        private Guna.UI2.WinForms.Guna2CircleButton addnew;
         private Guna.UI2.WinForms.Guna2CircleButton settings;
         private Guna.UI2.WinForms.Guna2CircleButton reload;
     }

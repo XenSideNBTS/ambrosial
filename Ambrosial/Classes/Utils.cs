@@ -114,8 +114,8 @@ namespace Ambrosial.Ambrosial
             {
                 using (StreamWriter sw = File.AppendText(path + logfilename))
                 {
-                    sw.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff") + " || [AMBROSIAL-LAUNCHER] : " + line);
-                    Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff") + " || [AMBROSIAL-LAUNCHER] : " + line);
+                    sw.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff") + " || [AMBROSIAL-RELOADED] : " + line);
+                    Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff") + " || [AMBROSIAL-RELOADED] : " + line);
                     sw.Flush();
                     sw.Close();
                     sw.Dispose();
@@ -131,28 +131,24 @@ namespace Ambrosial.Ambrosial
             fileInfo.SetAccessControl(accessControl);
         }
 
-        [DllImport("kernel32.dll")]
-        public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 
-        // Token: 0x06000038 RID: 56
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
-        public static extern IntPtr GetModuleHandle(string lpModuleName);
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+    public static extern IntPtr GetModuleHandle(string lpModuleName);
 
-        // Token: 0x06000039 RID: 57
-        [DllImport("kernel32", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
-        private static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+    [DllImport("kernel32.dll", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
+    private static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
 
-        // Token: 0x0600003A RID: 58
-        [DllImport("kernel32.dll", ExactSpelling = true, SetLastError = true)]
-        private static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
+    [DllImport("kernel32.dll", SetLastError = true)]
+    private static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
 
-        // Token: 0x0600003B RID: 59
-        [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out UIntPtr lpNumberOfBytesWritten);
+    [DllImport("kernel32.dll", SetLastError = true)]
+    private static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out UIntPtr lpNumberOfBytesWritten);
 
-        // Token: 0x0600003C RID: 60
-        [DllImport("kernel32.dll")]
-        private static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+    [DllImport("kernel32.dll")]
+    private static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+
 
         public static void inject(string path)
         {
